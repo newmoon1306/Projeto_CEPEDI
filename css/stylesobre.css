@@ -1,0 +1,190 @@
+/* Reseta a margem e o padding de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Garante que o corpo da página ocupe toda a altura da tela */
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estrutura básica da página */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Garante que o rodapé fique no final da página */
+main {
+    flex: 1;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color:#6A1B9A;
+    padding: 20px 0;
+   
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: #fff;
+}
+header .site-name {
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 25px; 
+    margin-left: 20px;
+    font-family: "Caveat", cursive; 
+    
+}
+
+
+/* Estilo do menu */
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Caveat", cursive;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #6A1B9A; /* Cor roxa da logo */
+}
+
+.menu a:hover {
+    background-color: #e65a89;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+
+/* Estilo da seção principal sobre a empresa */
+#about-us {
+    padding: 40px 20px;
+    background-color: #F3E5F5; 
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#about-us .about-content {
+    margin-bottom: 40px;
+}
+
+#about-us h2 {
+    color: #6A1B9A; 
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#about-us p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos cards */
+.about-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #6A1B9A; 
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #6A1B9A; 
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    margin-top: auto; /* Garante que o rodapé fique no final da página */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .header-text h1 {
+        font-size: 2rem;
+    }
+    header .site-name {
+        margin-left: 0; /* Remove o espaçamento extra em telas menores */
+        font-size: 15px; /* Reduz o tamanho da fonte em telas pequenas */
+    }
+
+    header .container {
+        justify-content: space-around; /* Distribui os elementos do cabeçalho de forma equilibrada */
+    }
+
+    .menu {
+        flex-wrap: wrap; /* Permite que o menu se ajuste à largura da tela */
+        justify-content: center; /* Centraliza o menu */
+        padding: 0; /* Remove espaçamento adicional */
+    }
+
+    .menu li {
+        margin-right: 10px; /* Ajusta o espaçamento entre os itens */
+    }
+
+    .menu li:last-child {
+        margin-right: 0; /* Remove o espaçamento adicional no último item */
+    }
+
+    header .container {
+        flex-direction: row; /* Mantém os elementos do cabeçalho em linha */
+        justify-content: space-between; /* Distribui os elementos do cabeçalho */
+    }
+
+    header img.logo {
+        margin-bottom: 0; /* Remove espaçamento abaixo da logo */
+    }
+}
